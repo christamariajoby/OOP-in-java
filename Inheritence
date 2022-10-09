@@ -1,0 +1,26 @@
+  class Ferrari
+      {
+       void Car()
+       {
+        System.out.println("Formula 1");
+       }
+      }
+
+     class Driver extends Ferrari
+      {
+       void Name()
+        {
+         System.out.println("F1-75");
+        }
+      }
+
+     class Main 
+      {
+       public static void main(String[] args) 
+        {
+         Driver D =new Driver();
+         D.Car();
+         D.Name();
+        }
+      }
+
