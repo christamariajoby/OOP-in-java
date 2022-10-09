@@ -1,0 +1,29 @@
+class test
+{
+
+int a,b;
+test(int x, int y)
+{
+a=x;
+b=y;
+}
+public void finalize()
+{
+System.out.println("Object is being deleted");
+}
+}
+
+class Main {
+public static void main(String args[])
+{
+test ob1= new test(9,7);
+test ob2=new test(9,3);
+test ob3= new test(8,9);
+ob1=null;
+
+System.gc();
+
+ob2=ob3;
+System.gc();
+}
+}
