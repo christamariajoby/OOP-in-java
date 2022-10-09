@@ -1,0 +1,82 @@
+class employee
+{
+String name =new String();
+int age;
+int phone;
+String Address =new String();
+float salary;
+employee(String nm,int ag,int ph,String Ad,float Sa)
+{
+name=nm;
+age=ag;
+phone=ph;
+Address= Ad;
+salary=Sa;
+}
+void print()
+{
+System.out.println("Name:"+name);
+System.out.println("Age:"+age);
+System.out.println("Phone:"+phone);
+System.out.println("Addres:"+Address);
+}
+void printSalary()
+{
+System.out.println("Salary:"+salary);
+}
+}
+class officer extends employee
+{
+String specialisation;
+officer(String spe,String nm,int ag,int ph,String Ad,float Sa)
+{
+super(nm,ag,ph,Ad,Sa);
+specialisation=spe;
+}
+void print()
+{
+super.print();
+super.printSalary();
+System.out.println("Specialisation:"+specialisation);
+}
+}
+class Manager extends employee
+{
+
+String department;
+Manager(String dep,String nm,int ag,int ph,String Ad,float Sa)
+{
+super(nm,ag,ph,Ad,Sa);
+department=dep;
+}
+void print()
+{
+super.print();
+super.printSalary();
+System.out.println("Department:"+department);
+}
+}
+class main1
+{
+public static void main(String[]args)
+{
+Manager m = new Manager("Management","Christa",20,2255,"Changanacherry",4500000);
+m.print();
+officer o = new officer("Tech","Maria",20,5522,"Thengana",8900000);
+o.print();
+}
+}
+/*output
+Name:Bharath
+Age:21
+Phone:2255
+Addres:krishnapriya
+Salary:4500000.0
+Department:Sales
+Name:Sundaram
+Age:20
+Phone:5522
+Addres:Altharamoodu
+Salary:8900000.0
+Specialisation:MD
+*/
