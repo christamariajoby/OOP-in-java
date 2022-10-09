@@ -1,0 +1,36 @@
+ class Owner
+     {
+      void shout()
+       {
+        System.out.println("MASTER");
+       }
+     }
+
+    class Donkey extends Owner
+     {
+      void bray()
+       {
+        System.out.println("DONKEY");
+       }
+     }
+
+    class Cow extends Owner
+     {
+      void moo()
+       {
+        System.out.println("COW");
+       }
+     }
+
+    class Main
+     {
+      public static void main(String[] args)
+       {
+        Donkey D =new Donkey();
+        Cow C =new Cow();
+        D.bray();
+        D.shout();
+        C.moo();
+        C.shout();
+       }
+     }
